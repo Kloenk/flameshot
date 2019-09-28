@@ -105,7 +105,7 @@ void ImgurUploader::upload() {
     QString description = FileNameHandler().parsedPattern();
     urlQuery.addQueryItem("description", description);
 
-    QUrl url("https://api.imgur.com/3/image");
+    QUrl url("http://localhost:8080/3/image");
     url.setQuery(urlQuery);
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader,
